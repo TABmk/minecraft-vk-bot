@@ -1,0 +1,17 @@
+{
+  "name": "minecraft-vk-bot",
+  "version": "1.0.0",
+  "description": "Бот для получения наград за подписку на группу ВК",
+  "main": "index.js",
+  "repository": "https://github.com/TABmk/minecraft-vk-bot.git",
+  "author": "TAB_mk <tabmk.contact@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "easyvk": "2.8.2",
+    "mysql-await": "2.1.8",
+    "rcon-client": "4.2.3"
+  },
+  "scripts": {
+    "start": "node index"
+  }
+}

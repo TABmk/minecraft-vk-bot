@@ -1,0 +1,44 @@
+{
+  "modules": {
+    "mysql" : {
+      "connectionLimit" : 10,
+      "host"            : "localhost",
+      "user"            : "minecraft",
+      "password"        : "myAwesomePass",
+      "database"        : "authme"
+    },
+    "rcon": {
+      "host": "127.0.0.1",
+      "port": 25575,
+      "password": "myAwesomePass"
+    },
+    "vk": {
+      "token": "myGroupToken",
+      "utils": {
+        "longpoll": true
+      }
+    }
+  },
+  "reward_type": "rcon",
+  "command": {
+    "RegExp": "^мой ник (.*)$",
+    "RegExp_flags": "i"
+  },
+  "rcon": {
+    "reward": "give %nickname% diamond 1",
+    "reconnect_time": 1000
+  },
+  "sql": {
+    "check_user": "SELECT * FROM authme WHERE username = '%nickname_lower%'",
+    "check_vkid": "SELECT 1 FROM authme WHERE vkid = '%vkid%'",
+    "save_vkid": "UPDATE authme SET vkid = %vkid% WHERE username = '%nickname_lower%'",
+    "reward": "[EXAMPLE, CHANGE THIS!] UPDATE mytable SET reward = 1 WHERE username = '%nickname_lower%'"
+  },
+  "messages": {
+    "reward": "Промокод XXX",
+    "success": "%nickname%, вам выдана награда\nПриятной игры!",
+    "player_check_fail": "Игрок не найден! Проверьте правильность написания ника. Получить приз можно только один раз и получит его ник, который вы укажите!",
+    "vkuser_already_rewarded": "Вы уже получили награду!",
+    "player_already_rewarded": "Этот игрок уже получил подарок за подписку!"
+  }
+}
