@@ -32,8 +32,8 @@ _Помощь и вопросы в [Issues](https://github.com/TABmk/minecraft-v
 - Включенный Rcon на сервере, если нужно выдавать награду командой
 - Токен группы ВК с доступом к сообщениям (Управление > Работа с API > Создать ключ)
 - Если вы используете AuthMeReloaded, как и задумано, то нужно создать столбец для vkID в таблице authme:
- - `USE authme;`
- - `ALTER TABLE authme ADD vkid INT NULL;`
+  - `USE authme;`
+  - `ALTER TABLE authme ADD vkid INT NULL;`
 ---
 ## Скачивание
 [[Скачать](https://github.com/TABmk/minecraft-vk-bot/archive/refs/heads/master.zip)] архив с проектом
@@ -113,8 +113,8 @@ yarn start
   - **host** - ip сервера
   - **port** - порт сервера
   - **password** - пароль от rcon
-- ###### rcon
-Данные для модуля [easyvk](https://www.npmjs.com/package/easyvk)
+- ###### vk
+  Данные для модуля [easyvk](https://www.npmjs.com/package/easyvk)
   - **token** - токен вашего сообщества с правами доступа к сообщениям `(Управление > Работа с API > Создать ключ)`
 
 #### reward_type
